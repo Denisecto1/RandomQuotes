@@ -1,14 +1,10 @@
 function localStorageSetItem(key, value) {
-  // Check if key is a string
   if (typeof key !== 'string') {
     console.error('Error: Key must be a string');
     return;
   }
-
   try {
-    // Convert value to JSON string
     const jsonValue = JSON.stringify(value);
-    // Set item in localStorage
     localStorage.setItem(key, jsonValue);
   } catch (error) {
     console.error('Error setting item in localStorage:', error);
